@@ -12,6 +12,9 @@ args = parser.parse_args()
 import os
 import json
 from collections import Counter,defaultdict
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt 
 
 # open the input path
 with open(args.input_path) as f:
@@ -23,6 +26,34 @@ if args.percent:
         counts[args.key][k] /= counts['_all'][k]
 
 # print the count values
-items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)
-for k,v in items:
-    print(k,':',v)
+#items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)
+orig_dict = dict(sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True))
+#for k,v in items:
+ #   print(k,':',v)
+
+
+
+# Top 10 keys
+top_ten = dict(reversed(sorted(orig_dict.items(), key = lambda x: x[1], reverse=True)[:10]))
+key = []
+value = []
+
+print("Top 10" + str(top_ten))
+
+#Plot
+plt.bar(range(len(top_ten)), list(top_ten.values()), align='center')
+plt.xticks(range(len(top_ten)), list(top_ten.keys()))
+
+plt.show()
+
+# lang/country
+if args.input_path == "reduced.lang":
+    plt.xlabel("Language")
+    plt.ylabel("Tweets with" + args.key)
+else:
+    plt.xlabel("Country")
+    plt.ylabel("Tweets with" + args.key)
+
+
+# bar graph png
+plt.savefig(args.input_path + args.key + '.png')
