@@ -21,7 +21,10 @@ After analyzing the tweets, I then created plots using the lang and country resu
 
 ### Plot 1: Country, #coronavirus
 
-<img src=reduced.country#coronavirus.png width=100% />
+<img
+  src="reduced.country#coronavirus.png"
+  title="Plot 1"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 ### Plot 2: Country, #코로나바이러스
 
