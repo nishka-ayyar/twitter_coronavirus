@@ -23,20 +23,24 @@ After analyzing the tweets, I then created plots using the lang and country resu
 
 <img
   src="country-coronavirus.png"
-  title="Plot 1"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 ### Plot 2: Country, #코로나바이러스
 
-<img src=reduced.country#코로나바이러스.png width=100% />
+<img
+  src="country-코로나바이러스.png"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 ### Plot 3: Lang, #coronavirus
 
-<img src=reduced.lang#coronavirus.png width=100% />
+<img
+  src="lang-coronavirus.png"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 ### Plot 4: Lang, #코로나바이러스
 
-<img src=reduced.lang#코로나바이러스.png width=100% />
+<img src="lang-코로나바이러스.png"
+style="display: inline-block; margin: 0 auto; max-width: 300px">>
 
 ## Process and Results
 
@@ -46,4 +50,4 @@ The results of my plots show the following information:
 Plot 1: This plot shows that the United States, India, and the UK were the countries with the highest number of #coronavirus tweets.
 Plot 2: This plot shows that the highest number of #코로나바이러스 (which is #coronavirus in Korean) tweets were from South Korea, with no other country remotely comparing. This makes sense, as Korean is the official language of South Korea.
 Plot 3: This plot shows that the languages that included the most #coronavirus tweets were English, Spanish, and Portuguese.
-Plot 4: This plot shows that the langueage with the most number of #코로나바이러스 tweets was Korean, which makes sense as #코로나바이러스 is the Korean form of #coronavirus.
+Plot 4: This plot shows that the language with the most number of #코로나바이러스 tweets was Korean, which makes sense as #코로나바이러스 is the Korean form of #coronavirus.
